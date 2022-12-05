@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="{Binding PANEL_WIDTH}" d:DesignHeight="{Binding PANEL_HEIGHT}"
+        x:Class="MyApp.MainWindow"
+        Title="MyApp">
+        <Window.KeyBindings>
+            <KeyBinding Command="{Binding WPressed}" Gesture="W"/>
+            <KeyBinding Command="{Binding SPressed}" Gesture="S"/>
+
+            <KeyBinding Command="{Binding UpPressed}" Gesture="Up"/>
+            <KeyBinding Command="{Binding DownPressed}" Gesture="Down"/>
+            <KeyBinding Command="{Binding WReleased}" />
+        </Window.KeyBindings>
+
+    <!-- <Button Content="{Binding ButtonText}" Command="{Binding ButtonClicked}"></Button> -->
+    <Canvas Width="800" Height="450">
+        <Rectangle Fill="Red" Height="80" Width="10" Canvas.Top="{Binding RedMove}"/>
+        <Rectangle Fill="Blue" Height="80" Width="10" Canvas.Left="790" Canvas.Top="{Binding BluMove}"/>
+        <Rectangle Fill="Green" Height="44" Width="44" Canvas.Left="450" Canvas.Top="40"/>
+        <Rectangle Fill="Orange" Height="44" Width="44" Canvas.Left="60" Canvas.Top="60"/>
+    </Canvas>
+        <!-- <Button Content="{Binding ButtonText}" Command="{Binding ButtonClicked}"/> -->
+</Window>
